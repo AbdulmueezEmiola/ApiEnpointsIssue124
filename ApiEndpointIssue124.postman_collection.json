@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "72f6c8ea-adfc-41a8-b986-b3dd7c2ed4bb",
+		"name": "ApiEndpointIssue124",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44354/put/7fa20ace-e311-4a55-9688-1bdd6b943f57",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"version\": \"AAAAAAADNFI=\",\r\n    \"fromBody1\": \"Body parameter 1\",\r\n    \"fromBody2\": \"Body parameter 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44354/put/7fa20ace-e311-4a55-9688-1bdd6b943f57",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44354",
+					"path": [
+						"put",
+						"7fa20ace-e311-4a55-9688-1bdd6b943f57"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -16,6 +16,7 @@ namespace ApiEnpointsIssue124.Endpoints
 		public override async Task<ActionResult> HandleAsync([FromRoute] RequestType request, CancellationToken cancellationToken = default)
 		{
 			Debug.Assert(request.Id != Guid.Empty);
+			Debug.Assert(request.Body != null);
 
 			await Task.Delay(0, cancellationToken);
 
@@ -24,10 +25,15 @@ namespace ApiEnpointsIssue124.Endpoints
 	}
 
 	public class RequestType
-{
+	{
 		[FromRoute(Name = "Id")] public Guid Id { get; set; }
-		[FromBody] public byte[] Version { get; set; }
-		[FromBody] public string FromBody1 { get; set; }
-		[FromBody] public string FromBody2 { get; set; }
+		[FromBody] public RequestBody Body { get; set; }
+	}
+
+	public class RequestBody
+	{
+		public byte[] Version { get; set; }
+		public string FromBody1 { get; set; }
+		public string FromBody2 { get; set; }
 	}
 }
